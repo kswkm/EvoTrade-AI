@@ -41,6 +41,10 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
+      - name: Prepare environment
+        run: |
+          cp .env.example .env
+
       - name: Run tests
         run: python -m pytest -q
 
